@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Image</th>
+  </tr>
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= link_to product.title, dashboard_path(product.id) %></td>
+      <td><%= image_tag(product.photo.url, height: '100', width: '100') %></td>
+    </tr>
+  <% end %>
+</table>

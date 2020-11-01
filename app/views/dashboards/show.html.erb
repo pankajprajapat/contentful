@@ -1,0 +1,29 @@
+<%= link_to "Back", dashboards_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <td><%= @product.title %></td>
+  </tr>
+  <tr>
+    <th>Image</th>
+    <td><%= image_tag(@product.photo.url, height: '100', width: '100') %></td>
+  </tr>
+  <tr>
+    <th>Tags</th>
+    <td>
+      <%= @product.tags.map(&:name) %>
+    </td>
+  </tr>
+  <tr>
+    <th>Content</th>
+    <td>
+      <%= @product.content %>
+    </td>
+  </tr>
+  <tr>
+    <th>Author</th>
+    <td>
+      <%= @product.author.name %>
+    </td>
+  </tr>
+</table>
